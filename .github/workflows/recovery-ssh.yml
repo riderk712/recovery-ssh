@@ -1,4 +1,4 @@
-name: Ubuntu-Server
+name: Recovery-SSH
 on: 
   workflow_dispatch:
 defaults:
@@ -41,5 +41,6 @@ jobs:
              cd work
              repo init -u $MANIFEST --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
              repo sync -j4
+             git clone $DT_LINK --depth=1 --single-branch $DT_PATH
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@master
