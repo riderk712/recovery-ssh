@@ -6,7 +6,7 @@ defaults:
     shell: bash
     
 env:
-  MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
+  MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-9.0
   DT_LINK: https://github.com/ElytrA8/recovery_rosy
   DT_PATH: device/xiaomi/rosy
   TARGET: recoveryimage
