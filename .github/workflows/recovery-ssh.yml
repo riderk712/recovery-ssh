@@ -39,7 +39,6 @@ jobs:
              repo init -u $MANIFEST --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
              repo sync -j4
              wget https://raw.githubusercontent.com/ElytrA8/scripts/main/shrp.sh
-             rm -rf device/qcom/common/cryptfs_hw
              bash shrp.sh
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@master
