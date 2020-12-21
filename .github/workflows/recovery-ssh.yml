@@ -7,6 +7,9 @@ defaults:
     
 env:
   MANIFEST: git://github.com/SKYHAWK-Recovery-Project/platform_manifest_twrp_omni.git -b android-9.0
+  DT_LINK: https://github.com/ElytrA8/recovery_rosy
+  DT_PATH: device/xiaomi/rosy
+  TARGET: recoveryimage
   TZ: Asia/Kolkata
   
 jobs:
@@ -38,7 +41,6 @@ jobs:
              cd work
              repo init -u $MANIFEST --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
              repo sync -j4
-             wget https://raw.githubusercontent.com/ElytrA8/scripts/main/shrp.sh
-             bash shrp.sh
+             git clone $DT_LINK --depth=1 --single-branch $DT_PATH
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@master
