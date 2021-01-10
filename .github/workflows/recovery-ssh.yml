@@ -6,8 +6,9 @@ defaults:
     shell: bash
     
 env:
-  MANIFEST: git://github.com/SKYHAWK-Recovery-Project/platform_manifest_twrp_omni.git
-  DT_LINK: https://github.com/GtrCraft/twrp_device_xiaomi_phoenix.git 
+  MANIFEST: 
+  MANIFEST: git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-10.0
+  DT_LINK: https://github.com/hraj9258/android_device_xiaomi_phoenix 
   DT_PATH: device/xiaomi/phoenix
   TARGET: recoveryimage
   TZ: Asia/Kolkata
