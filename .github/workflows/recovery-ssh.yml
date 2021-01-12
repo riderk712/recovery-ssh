@@ -8,7 +8,7 @@ defaults:
 env:
   MANIFEST: 
   MANIFEST: git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-10.0
-  DT_LINK: https://github.com/hraj9258/android_device_xiaomi_phoenix 
+  DT_LINK: https://github.com/riderk712/android_device_xiaomi_phoenix 
   DT_PATH: device/xiaomi/phoenix
   TARGET: recoveryimage
   TZ: Asia/Kolkata
@@ -42,6 +42,6 @@ jobs:
              cd work
              repo init -u $MANIFEST --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
              repo sync -j8 --force-sync
-             git clone https://github.com/GtrCraft/twrp_device_xiaomi_phoenix.git --depth=1 --single-branch device/xiaomi/phoenix
+             git clone $DT_LINK --depth=1 --single-branch $DT_PATH
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@master
